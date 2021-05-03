@@ -6,7 +6,6 @@ COPY package*.json ./
 
 # install dependencies
 RUN npm install
-RUN npm postinstall
 
 COPY . .
 

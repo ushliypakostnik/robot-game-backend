@@ -17,7 +17,7 @@ router.get('/test', (req, res, next) => {
 });
 
 
-// Check user
+// Set user
 router.post('/user', jsonParser, (req, res) => {
   const { body: { robotID } } = req;
 
