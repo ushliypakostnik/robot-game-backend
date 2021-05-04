@@ -1,7 +1,5 @@
 FROM node:lts-alpine
 
-WORKDIR /projects/github/robot-game-backend
-
 COPY package*.json ./
 
 # install dependencies
