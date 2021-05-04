@@ -1,5 +1,7 @@
 FROM node:lts-alpine
 
+WORKDIR /opt/app
+
 COPY package*.json ./
 
 # install dependencies
