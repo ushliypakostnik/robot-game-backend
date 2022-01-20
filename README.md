@@ -31,6 +31,7 @@ Create a database at https://cloud.mongodb.com/
 
 Create @/src/pass.js like @/src/pass.js.tmpl:
 
+```js
   const PASS = {
     DB: {
       url: 'mongodb+srv://admin:[...your key...]',
@@ -39,6 +40,7 @@ Create @/src/pass.js like @/src/pass.js.tmpl:
   };
 
   export default PASS;
+```
 
 And write your correct key into it
 
