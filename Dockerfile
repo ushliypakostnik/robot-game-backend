@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:16-alpine
 
 WORKDIR /opt/app
 
@@ -11,11 +11,13 @@ COPY . .
 
 # for development
 # CMD ["npm", "start"]
+
 # for production
+RUN npm run build
 CMD ["npm", "run", "prod"]
 
 # Сборка образа
 # sudo docker build -t robot-game-backend .
 
 # Запуск образа
-# sudo lf
+# sudo docker run -p 8082:8082 robot-game-backend

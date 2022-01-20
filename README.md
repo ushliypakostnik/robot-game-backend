@@ -27,6 +27,21 @@ Deploy
 Development
 -----------
 
+Create a database at https://cloud.mongodb.com/
+
+Create @/src/pass.js like @/src/pass.js.tmpl:
+
+  const PASS = {
+    DB: {
+      url: 'mongodb+srv://admin:[...your key...]',
+    },
+    RANDOM_BYTES: Number,
+  };
+
+  export default PASS;
+
+And write your correct key into it
+
     $ npm start
 
     http://localhost:8082/

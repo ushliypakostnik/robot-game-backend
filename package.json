@@ -5,10 +5,11 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon server.js --exec babel-node",
-    "prod": "cross-env NODE_ENV=production nodemon server.js --exec babel-node",
-    "lint": "eslint .",
-    "test": "cross-env NODE_ENV=development jest --watch"
+    "start": "cross-env NODE_ENV=development nodemon src/server.js --exec babel-node",
+    "prod": "cross-env NODE_ENV=development node build/server.js",
+    "build": "rm -rf build && babel src -d build",
+    "lint": "eslint src",
+    "test": "cross-env NODE_ENV=development jest src --watch"
   },
   "author": "Levon Gambaryan",
   "license": "ISC",
@@ -31,6 +32,7 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.16",
     "@babel/core": "^7.5.0",
     "@babel/node": "^7.5.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.3",
